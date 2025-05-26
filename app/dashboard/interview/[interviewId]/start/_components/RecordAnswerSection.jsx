@@ -130,14 +130,6 @@ function RecordAnswerSection({ mockInterviewQuestion = {}, activeQuestionIndex, 
           }}
         />
       </div>
-
-      {/* Face Feedback Component */}
-      <FaceFeedback onFeedback={(feedbackMessage) => setFaceFeedback(feedbackMessage)} />
-
-      {/* Display user answer and face feedback */}
-      <p>{userAnswer}</p>
-      <p><strong>Face Feedback:</strong> {faceFeedback}</p> {/* Display face feedback here */}
-
       <Button
         disabled={loading}
         variant="outline" className="my-10"
@@ -152,6 +144,15 @@ function RecordAnswerSection({ mockInterviewQuestion = {}, activeQuestionIndex, 
             <Mic />  Record Answer
           </h2>}
       </Button>
+
+      {/* Face Feedback Component */}
+      <FaceFeedback onFeedback={(feedbackMessage) => setFaceFeedback(feedbackMessage)} />
+
+      {/* Display user answer and face feedback */}
+      <p>{userAnswer}</p>
+      <p><strong>Face Feedback:</strong> {faceFeedback}</p> {/* Display face feedback here */}
+
+      
     </div>
   );
 }
